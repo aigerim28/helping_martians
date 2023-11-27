@@ -13,6 +13,12 @@ def generate_weights(total_weight):
     weights.append(cargo3)
     return weights
 
+def generate_positions():
+    box_positions = [random.randint(1, 8) for _ in range(3)]
+    if box_positions[0] == box_positions[1] or box_positions[1] == box_positions[2] or box_positions[0] == box_positions[2]:
+        generate_positions()
+    return box_positions
+
 # This is the main function of our program. It gets 3 positions from user
 # until it gets the correct ones with cargos with total weight 713 kg.
 def find_cargo():
