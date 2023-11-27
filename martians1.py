@@ -1,6 +1,7 @@
-
 import random
 
+# This function generates random weights for 3 cargos with total weight 713 kg 
+# and puts them in one list.
 def generate_weights(total_weight):
     weights = []
     cargo1 = random.randint(1, total_weight - 2)
@@ -14,7 +15,6 @@ def generate_weights(total_weight):
 
 # This is the main function of our program. It gets 3 positions from user
 # until it gets the correct ones with cargos with total weight 713 kg.
-
 def find_cargo():
     total_weight = 713
     box_weights = generate_weights(total_weight)
