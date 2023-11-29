@@ -13,6 +13,8 @@ def generate_weights(total_weight):
     weights.append(cargo3)
     return weights
 
+# The function generates list of 3 random positions, so they are not equal
+# because more than 1 cargo can not be in 1 position
 def generate_positions():
     box_positions = [random.randint(1, 8) for _ in range(3)]
     if box_positions[0] == box_positions[1] or box_positions[1] == box_positions[2] or box_positions[0] == box_positions[2]:
