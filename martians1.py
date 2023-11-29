@@ -19,6 +19,16 @@ def generate_positions():
         generate_positions()
     return box_positions
 
+def compare_positions(positions1, positions2):
+    true_count = 0
+    for i in range(3):
+        if positions1[i] == positions2[i]:
+            true_count += 1
+    if true_count == 3:
+        return True
+    else:
+        return False 
+
 # This is the main function of our program. It gets 3 positions from user
 # until it gets the correct ones with cargos with total weight 713 kg.
 def find_cargo():
