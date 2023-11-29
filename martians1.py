@@ -21,6 +21,8 @@ def generate_positions():
         generate_positions()
     return box_positions
 
+# The goal of this function is to compare each element of two lists
+# and determine if they are totally match (so we can know, whether our positions are right, or not)
 def compare_positions(positions1, positions2):
     true_count = 0
     for i in range(3):
